@@ -1,23 +1,32 @@
 package com.thoughtworks.warlock;
 
 public class WarlockBuilder implements PersonBuilder{
+
+    private Person person;
+
+    public WarlockBuilder() {
+        this.person = new Person();
+    }
+
     @Override
     public void buildHead() {
+        person.setHead("big head");
 
     }
 
     @Override
     public void buildBody() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        person.setBody("strong body");
+
     }
 
     @Override
     public void buildFoot() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        person.setFoot("jump foot");
     }
 
     @Override
     public Person buildPerson() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return person;
     }
 }
